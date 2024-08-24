@@ -1,0 +1,11 @@
+<div style="border: 2px;">
+    <h1>CALCULADORA</h1>
+    <label for="">Valor 1</label>
+    <input type="number" placeholder="Ingrese primer valor" [(ngModel)]="firstValue">
+    <label for="">Valor 2</label>
+    <input type="number" placeholder="Ingrese primer valor" [(ngModel)]="secondValue">
+<input type="text" name="" id="" disabled="true" [placeholder]="screenResult">
+
+    <app-hijo (resultado)="mostrar($event)" [firstValue]="firstValue" [secondValue]="secondValue"></app-hijo>
+</div>
+{{firstValue}}{{secondValue}}
