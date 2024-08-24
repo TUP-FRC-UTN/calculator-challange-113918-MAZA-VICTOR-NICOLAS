@@ -1,11 +1,25 @@
-<div style="border: 2px;">
-    <h1>CALCULADORA</h1>
-    <label for="">Valor 1</label>
-    <input type="number" placeholder="Ingrese primer valor" [(ngModel)]="firstValue">
-    <label for="">Valor 2</label>
-    <input type="number" placeholder="Ingrese primer valor" [(ngModel)]="secondValue">
-<input type="text" name="" id="" disabled="true" [placeholder]="screenResult">
-
-    <app-hijo (resultado)="mostrar($event)" [firstValue]="firstValue" [secondValue]="secondValue"></app-hijo>
-</div>
-{{firstValue}}{{secondValue}}
+<div class="container mt-5 p-4 border border-primary rounded shadow-sm bg-light">
+    <h1 class="text-center text-primary mb-4">CALCULADORA</h1>
+  
+    <div class="row mb-3">
+      <div class="col">
+        <label for="valor1" class="form-label">Valor 1</label>
+        <input type="number" id="valor1" class="form-control" placeholder="Ingrese primer valor" [(ngModel)]="firstValue">
+      </div>
+      <div class="col">
+        <label for="valor2" class="form-label">Valor 2</label>
+        <input type="number" id="valor2" class="form-control" placeholder="Ingrese segundo valor" [(ngModel)]="secondValue">
+      </div>
+    </div>
+  
+    <div class="row mb-3">
+      <div class="col">
+        <input type="text" class="form-control text-center" id="resultado" [placeholder]="screenResult" disabled>
+      </div>
+    </div>
+  
+    <div class="text-center mb-3">
+      <app-hijo (resultado)="mostrar($event)" [firstValue]="firstValue" [secondValue]="secondValue"></app-hijo>
+    </div>
+  </div>
+  
